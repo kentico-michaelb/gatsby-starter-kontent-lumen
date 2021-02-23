@@ -155,4 +155,3 @@ This example is ready to be used with [Web Spotlight](https://webspotlight.konte
 
 ![Web Spotlight preview](./docs/web-spotlight.png)
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/gatsby-starter-kontent-lumen?pixel)
