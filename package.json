@@ -32,7 +32,7 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
-    "gatsby-plugin-google-fonts": "latest"
+    "gatsby-plugin-google-fonts": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
