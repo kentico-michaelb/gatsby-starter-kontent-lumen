@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "prepare-environment": "node scripts/ncp.js .env.template .env -u",
-    "develop": "gatsby develop",
+    "develop": "cross-env ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop",
     "build": "gatsby build",
     "build:netlify": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "clean": "gatsby clean",
@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "@kentico/gatsby-kontent-components": "^6.0.0",
-    "@kentico/gatsby-source-kontent": "6.1.0",
+    "@kentico/gatsby-source-kontent": "^7.1.0-alpha.0",
     "@kentico/kontent-smart-link": "0.0.3",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
