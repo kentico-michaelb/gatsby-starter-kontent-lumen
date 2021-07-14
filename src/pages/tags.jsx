@@ -24,14 +24,21 @@ class TagsRoute extends React.Component {
                   <div className="tags">
                     <ul className="tags__list">
                       {tags.map(tag => (
-                        <li key={tag.elements.title.value} className="tags__list-item"
+                        <li
+                          key={tag.elements.title.value}
+                          className="tags__list-item"
                           data-kontent-item-id={tag.system.id}
-                          data-kontent-element-codename="title">
+                          data-kontent-element-codename="title"
+                        >
                           <Link
                             to={`/tags/${tag.elements.slug.value}/`}
                             className="tags__list-item-link"
                           >
-                            {tag.elements.title.value} ({_.get(tag.used_by_articles, 'length', 'N/A')})
+                            {tag.elements.title.value}
+                            {' '}
+                            (
+                            {_.get(tag.used_by_articles, 'length', 'N/A')}
+                            )
                           </Link>
                         </li>
                       ))}

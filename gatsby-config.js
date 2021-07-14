@@ -24,8 +24,8 @@ module.exports = {
           : undefined,
         languageCodenames: process.env.KONTENT_LANGUAGE_CODENAMES.split(',').map(lang => lang.trim()),
         experimental: {
-          managementApiTriggersUpdate: true
-        }
+          managementApiTriggersUpdate: true,
+        },
       },
     },
     {

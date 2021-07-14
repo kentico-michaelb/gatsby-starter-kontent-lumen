@@ -25,7 +25,7 @@ class Article extends React.Component {
             {moment(date).format('MMMM YYYY')}
           </time>
           <span className="article__meta-divider" />
-          <span className="article__meta-category" key={categorySlug}  data-kontent-element-codename="category">
+          <span className="article__meta-category" key={categorySlug} data-kontent-element-codename="category">
             <Link to={`/categories/${categorySlug}/`} className="article__meta-category-link">
               {category}
             </Link>
@@ -36,7 +36,7 @@ class Article extends React.Component {
             {title}
           </Link>
         </h2>
-        <p className="article__description"  data-kontent-element-codename="description">{description}</p>
+        <p className="article__description" data-kontent-element-codename="description">{description}</p>
         <Link className="article__readmore" to={slug}>
           Read
         </Link>

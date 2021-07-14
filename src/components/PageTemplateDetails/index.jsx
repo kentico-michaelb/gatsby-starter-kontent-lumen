@@ -13,8 +13,10 @@ class PageTemplateDetails extends React.Component {
         <div className="content">
           <div className="content__inner">
             <div className="page" data-kontent-item-id={kontentItemPage.system.id}>
-              <h1 className="page__title"
-                data-kontent-element-codename="title">
+              <h1
+                className="page__title"
+                data-kontent-element-codename="title"
+              >
                 {kontentItemPage.elements.title.value}
               </h1>
               <div

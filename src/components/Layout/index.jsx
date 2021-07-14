@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react'
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import '../../assets/scss/init.scss'
-import KontentSmartLink from '@kentico/kontent-smart-link';
+import KontentSmartLink from '@kentico/kontent-smart-link'
 import '@kentico/kontent-smart-link/dist/kontent-smart-link.styles.css'
 
 const Layout = ({ children }) => {
   useEffect(() => {
     const plugin = KontentSmartLink.initialize({
-      queryParam: 'preview-mode'
-    });
+      queryParam: 'preview-mode',
+    })
     return () => {
-      plugin.destroy();
-    };
-  });
+      plugin.destroy()
+    }
+  })
 
   return (
     <StaticQuery
@@ -28,7 +28,8 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <div className="layout"
+        <div
+          className="layout"
           data-kontent-project-id={data.sitePlugin.pluginOptions.projectId}
           data-kontent-language-codename={data.sitePlugin.pluginOptions.languageCodenames[0]}
         >
@@ -38,10 +39,9 @@ const Layout = ({ children }) => {
           {children}
         </div>
       )}
-    ></StaticQuery>
+    />
 
   )
 }
-
 
 export default Layout
