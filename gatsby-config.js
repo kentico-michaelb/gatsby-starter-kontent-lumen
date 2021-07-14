@@ -18,7 +18,7 @@ module.exports = {
       options: {
         projectId: process.env.KONTENT_PROJECT_ID, // Fill in your Project ID
         // if false used authorization key for secured API
-        usePreviewUrl: process.env.KONTENT_PREVIEW_ENABLED && process.env.KONTENT_PREVIEW_ENABLED.toLowerCase() === 'true',
+        usePreviewUrl: !!(process.env.KONTENT_PREVIEW_ENABLED && process.env.KONTENT_PREVIEW_ENABLED.toLowerCase() === 'true'),
         authorizationKey: process.env.KONTENT_PREVIEW_ENABLED && process.env.KONTENT_PREVIEW_ENABLED.toLowerCase() === 'true'
           ? process.env.KONTENT_PREVIEW_KEY
           : undefined,
@@ -48,10 +48,10 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: '' }, // add own google analytics trackingId
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: { trackingId: '' }, // add own google analytics trackingId
+    // },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -94,7 +94,9 @@ module.exports = {
             minPixelValue: 0,
           }),
         ],
-        precision: 8,
+        sassOptions: {
+          precision: 8,
+        },
       },
     },
   ],
