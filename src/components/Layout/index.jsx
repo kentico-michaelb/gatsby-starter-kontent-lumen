@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     <StaticQuery
       query={graphql`
         {
-          sitePlugin(name: {eq: "@kentico/gatsby-source-kontent"}) {
+          sitePlugin(name: { eq: "@kentico/gatsby-source-kontent" }) {
             pluginOptions {
               projectId
               languageCodenames
@@ -27,11 +27,13 @@ const Layout = ({ children }) => {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <div
           className="layout"
           data-kontent-project-id={data.sitePlugin.pluginOptions.projectId}
-          data-kontent-language-codename={data.sitePlugin.pluginOptions.languageCodenames[0]}
+          data-kontent-language-codename={
+            data.sitePlugin.pluginOptions.languageCodenames[0]
+          }
         >
           <Helmet defaultTitle="Blog by John Doe">
             <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -40,7 +42,6 @@ const Layout = ({ children }) => {
         </div>
       )}
     />
-
   )
 }
 
