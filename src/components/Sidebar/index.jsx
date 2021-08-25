@@ -6,7 +6,7 @@ import Menu from '../Menu'
 import Links from '../Links'
 import './style.scss'
 
-const sidebar = ({ isHomePage }) => {
+const Sidebar = ({ isHomePage }) => {
   const data = useStaticQuery(graphql`
     query SidebarQuery {
       kontentItemSiteMetadata(system: { codename: { eq: "site_metadata" } }) {
@@ -140,4 +140,4 @@ const sidebar = ({ isHomePage }) => {
   )
 }
 
-export default sidebar
+export default Sidebar
