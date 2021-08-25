@@ -37,7 +37,7 @@ class Article extends React.Component {
           </time>
           <span className="article__meta-divider" />
           <span 
-             data-kontent-element-codename="tags"
+             data-kontent-element-codename="category"
              data-kontent-add-button
              data-kontent-add-button-insert-position="end"
              data-kontent-add-button-render-position="right-end"
