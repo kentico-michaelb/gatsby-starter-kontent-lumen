@@ -8,15 +8,10 @@ class Article extends React.Component {
   render() {
     const title = _.get(this.props, 'data.elements.title.value', 'N/A')
     const date = _.get(this.props, 'data.elements.date.value', 'N/A')
-    const category = _.get(
+    const categories = _.get(
       this.props,
-      'data.elements.category.value[0].elements.title.value',
-      'N/A'
-    )
-    const categorySlug = _.get(
-      this.props,
-      'data.elements.category.value[0].elements.slug.value',
-      'N/A'
+      'data.elements.category.value',
+      []
     )
     const description = _.get(
       this.props,
@@ -41,18 +36,31 @@ class Article extends React.Component {
             {moment(date).format('MMMM YYYY')}
           </time>
           <span className="article__meta-divider" />
-          <span
-            className="article__meta-category"
-            key={categorySlug}
-            data-kontent-element-codename="category"
-          >
-            <Link
-              to={`/categories/${categorySlug}/`}
-              className="article__meta-category-link"
+          <span 
+             data-kontent-element-codename="tags"
+             data-kontent-add-button
+             data-kontent-add-button-insert-position="end"
+             data-kontent-add-button-render-position="right-end"
             >
-              {category}
-            </Link>
+          {categories.map(category => {
+            console.log(category)
+            return (
+              <span
+              className="article__meta-category"
+              key={category.elements.slug.value}
+              data-kontent-element-codename="category"
+            >
+              <Link
+                to={`/categories/${category.elements.slug.value}/`}
+                className="article__meta-category-link"
+              >
+                {category.elements.title.value  + " "}
+              </Link>
+            </span>
+            )
+          })}
           </span>
+
         </div>
         <h2 className="article__title" data-kontent-element-codename="title">
           <Link className="article__title-link" to={slug}>

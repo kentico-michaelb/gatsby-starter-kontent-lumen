@@ -26,7 +26,6 @@ class ArticleTemplateDetails extends React.Component {
       <div className="article-single__tags">
         <ul
           className="article-single__tags-list"
-          data-kontent-element-codename="tags"
         >
           {tags &&
             tags.map((tag) => (
