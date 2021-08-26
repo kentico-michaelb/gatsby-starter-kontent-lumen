@@ -43,7 +43,6 @@ class Article extends React.Component {
              data-kontent-add-button-render-position="right-end"
             >
           {categories.map(category => {
-            console.log(category)
             return (
               <span
               className="article__meta-category"
