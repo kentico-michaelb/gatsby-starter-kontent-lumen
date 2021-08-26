@@ -23,7 +23,7 @@ It is required to do three steps. First, prepare the code for the Web Spotlight 
 
 ### Kontent Smart Link SDK
 
-The site has to use [Kontent Smart Link SDK](https://github.com/Kentico/kontent-smart-link#readme). In this example, the Smar Link SDK is already configured in the [layout component](../src/components/Layout/index.jsx) with the query string parameter name set to `preview-mode` and marking the element by the appropriate [data attributes](https://github.com/Kentico/kontent-smart-link/blob/master/README.md#data-attributes). You could use turn on the "Preview mode" by just adding a query string parameter to your URL (i.e. locally on <http://localhost:8000/?preview-mode=true>).
+The site has to use [Kontent Smart Link SDK](https://github.com/Kentico/kontent-smart-link#readme). In this example, the Smart Link SDK is already configured in the [layout component](../src/components/Layout/index.jsx) with the query string parameter name set to `preview-mode` and marking the element by the appropriate [data attributes](https://github.com/Kentico/kontent-smart-link/blob/master/README.md#data-attributes). You could use turn on the "Preview mode" by just adding a query string parameter to your URL (i.e. locally on <http://localhost:8000/?preview-mode=true>).
 
 
 ### Turn on Web spotlight
@@ -77,5 +77,13 @@ These objects are about to be created or enabled when the Web Spotlight is activ
 ![Web Spotlight preview](./web-spotlight.png)
 
 > If you have chosen Gatsby Cloud for your preview hosting, you are not even required to use `Refresh preview` button - the site should refresh itself once the site is rebuilt.
+
+### Using the "Add" button in Web Spotlight
+
+With Web Spotlight enabled, the sample also showcases how to [Add content directly from preview](https://docs.kontent.ai/tutorials/write-and-collaborate/create-content/manage-your-website#a-add-content-directly-from-preview) by allowing editors to add categories to articles from the homepage and articles preview. 
+
+![Web Spotlight Add button preview](./web-spotlight-add-button.png)
+
+More information about the "Add button" can be seen in the [Kontent Smart Link SDK documentation](https://github.com/Kentico/kontent-smart-link#add-button).
 
 ![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/gatsby-starter-kontent-lumen/docs/WEB-SPOTLIGHT?pixel)
